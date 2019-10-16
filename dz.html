@@ -1,14 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <h3>hello</h3>
-    <h3>123</h3>
-    //hhhg/
+    <script>//38.	З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
+        let age = parseInt(prompt('age'))
+        if (age >= 1 && age <= 5)
+            document.write('you baby')
+        else
+            if (age >= 6 && age <= 18)
+                document.write('you schoolboy')
+            else
+                if (age >= 18 && age <= 24)
+                    document.write('you student')
+                else
+                    if (age >= 25 && age <= 50)
+                        document.write('you work')
+                    else
+                        if (age >= 51 && age <= 100)
+                            document.write('you pensioner')
+    </script>
+    <script>//31.	З клавіатури вводяться імена двох дітей та кількість шоколадок. Вивести не екран ім’я того учня, у якого кількість шоколадок є більшою.
+        let name = prompt('name', '')
+        name2 = prompt('name2', '')
+        kilk = parseInt(prompt('kilk', ''))
+        suma = (name, name2 + kilk)
+        result = suma, Math.floor((name - name2 + 1) * Math.random());
+        alert(result)
+    </script>
+    <script>//Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби
+        let number = parseInt(prompt('you number'))
+        alert(Math.floor(Math.random() * 5))
+        let number2 = parseInt(prompt('you number2'))
+        alert(Math.floor(Math.random() * 5))
+    </script>
+    <script>//З клавіатури вводиться кількість балів. Вивести на екран оцінку (задовільно, добре чи відмінно).
+        let score = parseInt(prompt('you score'))
+        if (score >= 1 && score <= 5)
+            document.write('quartet')
+        else
+            document.write('')
+        if (score >= 6 && score <= 9)
+            document.write('good')
+        else
+            document.write('')
+        if (score >= 10 && score <= 12)
+            document.write('super')
+        else
+            document.write('')
+    </script>
+    <script>//З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+        let num = parseInt(prompt('keep the price in UAH', ''))
+        let num2 = parseInt(prompt('your amount', ''))
+        if (num2 < num)
+            document.write('purchase is not allowed')
+        else {
+            if (num2 > num)
+                document.write('purchase allowed')
+            let a = num2 - num
+            document.write(`for the rest we offer a bar for ${a} UAH `)
+        }
+    </script>
+    <script>//На роботу компаніє приймає працівників від 32 до 45 років. З клавіатури вводиться вік претендента. З’ясувати, чи може він бути прийнятим на роботу.
+        let age = parseInt(prompt('age'))
+        if (age >= 32 && age <= 45)
+            document.write('ok, you are accepted')
+        else {
+            if (age < 32)
+                document.write('Too young')
+            else
+                document.write('Too old')
+        }
+    </script>
+    <script>//Найбільше серед двох замінити на 0. Якщо однакові, то замінити обидва на 1.
+        let num1 = parseInt(prompt("Num1"))
+        let num2 = parseInt(prompt("Num2"))
+        let max
+        if (num1 > num2)
+            max = num1
+        else
+            max = -true
+        document.write(`Max= ${max}`)
+    </script>
+    <script>//На роботу компаніє приймає працівників від 32 до 45 років. З клавіатури вводиться вік претендента. З’ясувати, чи може він бути прийнятим на роботу.
+        let age = parseInt(prompt('age'))
+        if (age >= 32 && age <= 45)
+            document.write('ok, you are accepted')
+        else {
+            if (age < 32)
+                document.write('Too young')
+            else
+                document.write('Too old')
+        }
+    </script>
+    <script>//З клавіатури вводиться назва категорії водія. Вивести на екран назву транспортного засобу, яким він може керувати
+        let category = prompt("Category")
+        switch (category) {
+            case "A": document.write("Moto")
+                break;
+            case "B": document.write("Auto")
+                break;
+            case "C": document.write("Truck")
+                break
+            default: document.write("Error")
+        }
+    </script>
+    <script>//1.1.	Найбільше серед двох різних замінити на 0
+        let num1 = parseInt(prompt("Num1"))
+        let num2 = parseInt(prompt("Num2"))
+        let max
+        if (num1 > num2)
+            max = num1
+        else
+            max = -0
+        document.write(`Max= ${max}`)
+    </script>
 </body>
 </html>
