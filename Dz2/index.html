@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    ваша зарплата: <input type="text" id="num1">
+    <br>
+    ваши комунальные: <input type="text" id="num3">
+    <br>
+    <br>
+  <button onclick="zak()">подсчитать розмер соц помощи</button>
+     <script>
+     function zak(){  
+     num1 = document.getElementById('num1').value 
+     num3 = document.getElementById('num3').value 
+     if (num1<num3)
+     document.write(`Soc.support:${num1-num3}`)
+     else
+     document.write ('Not applied')
+     }
+     </script>
+</body>
+</html>
