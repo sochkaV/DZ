@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// Задача 0. Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+function years (rock){
+switch (rock) {
+    case 1:
+    case 2:
+    case 3:
+    return('зима')
+    case 4:
+    case 5:
+    case 6:
+    return('весна')
+    case 7:
+    case 8:
+    case 9:
+    return('літо')
+    case 10:
+    case 11:
+    case 12:   
+    return('осінь')
+    default: 
+    return 'неправильне число'
+}
+}
+let rock = parseInt(prompt('Key num'))
+document.write(years(rock))
+//Задача 1. Створити функцію, яка за номером місяця повертає його назву.
+function Month (day){
+    switch (day) {
+        case 1:
+        return 'січень'
+        case 2:
+        return 'лютий'
+        case 3:
+        return  'березень'
+        case 4:
+        return  'квітень'
+        case 5:
+        return  'травень'
+        case 6:
+        return  'червень'
+        case 7:
+        return  'липень'
+        case 8:
+        return  'серпень'
+        case 9:
+        return  'вересень'
+        case 10:
+        return  'жовтень'
+        case 11:
+        return 'листопад'
+        case 12:
+        return 'грудень'
+        default:
+        return 'неправильно введено'
+    }
+}
+let day = parseInt(prompt('key numb month'))
+document.write(Month(day))
+//Задача 2. Створити функцію, яка за номером тижня повертає кількість уроків(так, як у вас було у школі).
+function Numb(day){
+switch (day) {
+case 'понеділок':
+return '5'
+case 'вівторок':
+return '6'
+case 'середа':
+return '7'
+case 'четвер':
+return '7'
+case 'пятниця':
+return '5'
+case 'субота':
+return '7'
+case 'неділя':
+return '9'
+    default:
+return 'неправильна відповідь'
+}    
+}
+let day = (prompt('введіть номер тижня'))
+document.write(Numb(day))
+//Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+//1)суму;
+//2)добуток;
+//3)середнє арифметичне;
+//4)мінімальне значення. 
+function summa(numb1,numb2,numb3){
+return numb1+numb2+numb3
+}
+function dob (numb1,numb2,numb3){
+return numb1*numb2*numb3
+}
+function ostaca(numb1,numb2,numb3){
+return numb1,numb2,numb3/3
+} 
+let numb1 = parseFloat(prompt('key num1'))
+let numb2 =parseFloat(prompt('key numb2'))
+let numb3 =parseFloat(prompt('key num3'))
+let res1=summa(numb1,numb2,numb3)
+let res2=dob(numb1,numb2,numb3)
+let res3=ostaca(numb1,numb2,numb3)
+document.write(`ваша сума = ${res1} добуток = ${res2} остача від ділення = ${res3}`)
+//Задача 4. Створити функцію, яка для 3 заданих чисел знаходить кількість парних.
+function summa(numb1,numb2,numb3){
+return 3 -numb1% 2-numb2 % 2 - numb3 % 2     
+}
+let numb1 = parseFloat(prompt('key numb1'))
+let numb2 = parseFloat(prompt('key numb2'))
+let numb3 = parseFloat(prompt('key numb3'))
+let res=summa(numb1,numb2,numb3)
+document.write(`${res}`)
+//Задача 5. Створити функції, які переводять:
+//1)	Сантиметри у дюйми;
+//2)	Кілограми у фунти;
+//3)	Кілометри у милі.
+function sm (dyjm){
+return dyjm /2.54
+}
+function kg (funt){
+return funt * 2.2046    
+}  
+function km(mila){
+return mila * 0.62137   
+}
+let dyjm = parseFloat(prompt('sm'))
+let funt = parseFloat(prompt('kg'))
+let mila = parseFloat(prompt('km'))
+let res = sm(dyjm)
+let res2 = kg(funt)
+let res3 = km(mila)
+alert(`res - ${res} res - ${res2} res - ${res3}`)
+//	Задача 6. Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців
+radok = parseInt(prompt('введіть кількість рядків'))
+stovb = parseInt(prompt('введіть кількість рядків'))
+   
+function table(radok,stovb){
+document.write('<table border=1>')    
+for (d = 0;d <radok; d++) {
+document.write('<tr>')
+for (s = 0;s <stovb; s++) {
+document.write('<td>один</td>')
+}
+document.write('</tr>')
+}
+document.write('</table>')
+}	
+table(radok,stovb)
+</script>
+</body>
+</html>
